@@ -1,0 +1,4 @@
+bot:
+    token: 'your-token'
+    clientId: 'your-cliend-id'
+    clientSecret: 'your-client-secret'
