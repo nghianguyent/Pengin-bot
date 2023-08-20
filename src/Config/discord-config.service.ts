@@ -6,25 +6,25 @@ import { GatewayIntentBits } from 'discord.js';
 
 @Injectable()
 export class DiscordConfigService implements DiscordOptionsFactory {
-	private readonly logger = new Logger();
-	constructor(private readonly configService: ConfigService) {}
-	createDiscordOptions(): DiscordModuleOption | Promise<DiscordModuleOption> {
-		return {
-			token: this.configService.get<string>('bot.token'),
-			discordClientOptions: {
-				intents: [
-					GatewayIntentBits.Guilds,
-					GatewayIntentBits.GuildMessages,
-					GatewayIntentBits.GuildMessageReactions,
-					GatewayIntentBits.MessageContent,
-					GatewayIntentBits.GuildVoiceStates,
-				],
-			},
-		};
-	}
+    private readonly logger = new Logger();
+    constructor(private readonly configService: ConfigService) {}
+    createDiscordOptions(): DiscordModuleOption | Promise<DiscordModuleOption> {
+        return {
+            token: this.configService.get<string>('bot.token'),
+            discordClientOptions: {
+                intents: [
+                    GatewayIntentBits.Guilds,
+                    GatewayIntentBits.GuildMessages,
+                    GatewayIntentBits.GuildMessageReactions,
+                    GatewayIntentBits.MessageContent,
+                    GatewayIntentBits.GuildVoiceStates,
+                ],
+            },
+        };
+    }
 
-	@Once('ready')
-	onReady(): void {
-		this.logger.log('Discord bot is ready');
-	}
+    @Once('ready')
+    onReady(): void {
+        this.logger.log('Discord bot is ready');
+    }
 }

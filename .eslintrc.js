@@ -5,11 +5,8 @@ module.exports = {
 		tsconfigRootDir: __dirname,
 		sourceType: 'module',
 	},
-	plugins: ['@typescript-eslint/eslint-plugin', 'unused-imports'],
-	extends: [
-		'plugin:@typescript-eslint/recommended',
-		'plugin:prettier/recommended',
-	],
+	plugins: ['@typescript-eslint/eslint-plugin', 'unused-imports', 'prettier'],
+	extends: ['plugin:@typescript-eslint/recommended', 'prettier'],
 	root: true,
 	env: {
 		node: true,
@@ -20,26 +17,9 @@ module.exports = {
 	rules: {
 		'prettier/prettier': [
 			'warn',
+			{},
 			{
-				singleQuote: true,
-				trailingComma: 'all',
-				printWidth: 80,
-				tabWidth: 4,
-				semi: true,
-				bracketSpacing: true,
-				endOfLine: 'auto',
-				arrowParens: 'avoid',
-				useTabs: true,
-				importOrder: [
-					'^@core/(.*)$',
-					'^@server/(.*)$',
-					'^@client/(.*)$',
-					'^@utils/(.*)$',
-					'^@types/(.*)$',
-					'^@/(.*)$',
-					'^[./]',
-				],
-				plugins: ['prettier-plugin-organize-imports'],
+				usePrettierrc: true,
 			},
 		],
 		'@typescript-eslint/interface-name-prefix': 'off',

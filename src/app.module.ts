@@ -6,13 +6,13 @@ import { ApiModule } from 'Modules/api/api.module';
 import { BotGatewayModule } from 'Modules/bot-gateway/bot-gateway.module';
 
 @Module({
-	imports: [
-		DiscordModule.forRootAsync({
-			useClass: DiscordConfigService,
-		}),
-		BotGatewayModule,
-		AppConfig,
-		ApiModule,
-	],
+    imports: [
+        DiscordModule.forRootAsync({
+            useClass: DiscordConfigService,
+        }),
+        BotGatewayModule,
+        AppConfig,
+        ApiModule,
+    ],
 })
 export class AppModule {}

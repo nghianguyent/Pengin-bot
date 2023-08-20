@@ -8,11 +8,11 @@ import { FapService } from 'Services/fap-services/fap.service';
 @SubCommand({ name: 'set', description: 'set cookie' })
 @Injectable()
 export class FapSetCookieCommand {
-	constructor(private readonly fapService: FapService) {}
+    constructor(private readonly fapService: FapService) {}
 
-	@Handler()
-	async onSetCookie(@IA(SlashCommandPipe) fap: FapDTO): Promise<any> {
-		this.fapService.setCookies(fap.cookies);
-		return 'Saved Cookies';
-	}
+    @Handler()
+    async onSetCookie(@IA(SlashCommandPipe) fap: FapDTO): Promise<any> {
+        this.fapService.setCookies(fap.cookies);
+        return 'Saved Cookies';
+    }
 }

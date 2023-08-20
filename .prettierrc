@@ -7,7 +7,7 @@
 	"bracketSpacing": true,
 	"endOfLine": "auto",
 	"arrowParens": "avoid",
-	"useTabs": true,
+	"useTabs": false,
 	"importOrder": [
 		"^@core/(.*)$",
 		"^@server/(.*)$",

@@ -11,13 +11,13 @@ import { FapClassGetCommand } from 'Commands/fap-command/class-commands/class.co
 import { FapService } from 'Services/fap-services/fap.service';
 
 @Module({
-	imports: [ApiModule, DiscordModule.forFeature()],
-	providers: [
-		FapCommand,
-		FapGetCookieCommand,
-		FapSetCookieCommand,
-		FapClassGetCommand,
-		FapService,
-	],
+    imports: [ApiModule, DiscordModule.forFeature()],
+    providers: [
+        FapCommand,
+        FapGetCookieCommand,
+        FapSetCookieCommand,
+        FapClassGetCommand,
+        FapService,
+    ],
 })
 export class FapCookiesCommandModule {}

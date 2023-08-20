@@ -4,11 +4,11 @@ import { FapCommandModule } from 'Modules/fap-command/fap-command.module';
 import { BotGatewayService } from 'Services/bot-gateway/bot-gateway.service';
 
 @Module({
-	imports: [DiscordModule.forFeature(), FapCommandModule],
-	providers: [BotGatewayService],
+    imports: [DiscordModule.forFeature(), FapCommandModule],
+    providers: [BotGatewayService],
 })
 export class BotGatewayModule {
-	constructor(private readonly botGatewayService: BotGatewayService) {
-		this.botGatewayService.onReady();
-	}
+    constructor(private readonly botGatewayService: BotGatewayService) {
+        this.botGatewayService.onReady();
+    }
 }

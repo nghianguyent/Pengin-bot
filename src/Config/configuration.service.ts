@@ -3,11 +3,11 @@ import { ConfigModule } from '@nestjs/config';
 import config from './config';
 
 @Module({
-	imports: [
-		ConfigModule.forRoot({
-			load: [config],
-			isGlobal: true,
-		}),
-	],
+    imports: [
+        ConfigModule.forRoot({
+            load: [config],
+            isGlobal: true,
+        }),
+    ],
 })
 export class AppConfig {}

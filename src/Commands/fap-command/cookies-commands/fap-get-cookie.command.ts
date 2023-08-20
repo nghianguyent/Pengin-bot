@@ -4,10 +4,10 @@ import { FapService } from '../../../Services/fap-services/fap.service';
 
 @SubCommand({ name: 'get', description: 'set cookie' })
 export class FapGetCookieCommand {
-	constructor(private readonly fapService: FapService) {}
+    constructor(private readonly fapService: FapService) {}
 
-	@Handler()
-	async onGetCookie(): Promise<any> {
-		return this.fapService.getCookies();
-	}
+    @Handler()
+    async onGetCookie(): Promise<any> {
+        return this.fapService.getCookies();
+    }
 }
