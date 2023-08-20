@@ -5,7 +5,10 @@
 	"author": "",
 	"private": true,
 	"license": "UNLICENSED",
-	"lint-staged": {},
+	"lint-staged": {
+		"{src,apps,libs,test}/**/*.ts": "eslint --fix",
+		"{src,apps,libs,test}/**/*.{ts,json,html,css,scss,md}": "prettier --write"
+	},
 	"scripts": {
 		"prepare": "husky install",
 		"build": "nest build",
