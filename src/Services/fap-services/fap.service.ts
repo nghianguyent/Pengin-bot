@@ -24,7 +24,6 @@ export class FapService {
         try {
             const table = dom.getElementById('id');
             const rows = table.querySelectorAll('tr').length;
-            console.log(rows);
             return 'Class info: ' + rows;
         } catch (err) {
             return "can't get class info: cookies expired";
